@@ -13,6 +13,7 @@ export default {
       colors: {
         'neon-red': '#ff0040',
         'neon-purple': '#bc13fe',
+        'brand-purple': '#4C1D95',
         'gold': '#FFD700',
         'deep-black': '#0a0a0a',
       },

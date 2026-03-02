@@ -63,19 +63,19 @@ function Linktree() {
         >
           <img 
             src="/linktree/logo shizu.jpg" 
-            alt="Shizü Logo" 
+            alt="ParáBrasil Logo" 
             className="h-32 w-32 rounded-full object-cover ring-2 ring-gold/30 sm:h-40 sm:w-40"
           />
         </motion.div>
 
-        {/* Título Shizü */}
+        {/* Título ParáBrasil */}
         <motion.h1
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
           className="mb-3 text-center text-3xl font-light tracking-wide text-white sm:text-4xl md:text-5xl"
         >
-          Shizü
+          ParáBrasil
         </motion.h1>
 
         {/* Subtítulo */}
@@ -85,7 +85,7 @@ function Linktree() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-12 text-center text-sm font-light leading-relaxed text-gray-300 sm:text-base"
         >
-          A melhor experiência da culinária japonesa aqui em Salvador
+          Açaí! A melhor experiência aqui em Salvador
         </motion.p>
 
         {/* Container dos Links */}

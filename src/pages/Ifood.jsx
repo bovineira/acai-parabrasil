@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { ShoppingBag } from 'lucide-react'
 
-// Link oficial do restaurante Shizü no iFood. No celular, o sistema pode abrir direto no app (Universal Links / App Links).
+// Link oficial ParáBrasil no iFood. No celular, o sistema pode abrir direto no app (Universal Links / App Links).
 const IFOOD_URL = 'https://www.ifood.com.br/delivery/salvador-ba/shizu-restaurante-rio-vermelho/58767f4d-9946-438a-85b8-172a48be9704?utm_medium=share'
 
 function Ifood() {
@@ -19,7 +19,7 @@ function Ifood() {
   useEffect(() => {
     if (window.fbq) {
       window.fbq('track', 'ViewContent', {
-        content_name: 'Shizü - iFood',
+        content_name: 'ParáBrasil - iFood',
         content_category: 'Delivery',
         value: 0,
         currency: 'BRL'
@@ -32,7 +32,7 @@ function Ifood() {
       <div
         className="absolute inset-0 z-0 bg-mobile-cover"
         style={{
-          backgroundImage: `url('/images/background-sushi.webp')`,
+          backgroundImage: `url('/images/background-lp-cardapio.webp')`,
         }}
       >
         <div className="absolute inset-0 bg-black/20"></div>
@@ -48,7 +48,7 @@ function Ifood() {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute left-10 top-20 z-0 h-32 w-32 rounded-full bg-neon-red/20 blur-3xl"
+        className="absolute left-10 top-20 z-0 h-32 w-32 rounded-full bg-neon-purple/20 blur-3xl"
       />
       <motion.div
         animate={{
@@ -64,21 +64,21 @@ function Ifood() {
         className="absolute bottom-20 right-10 z-0 h-40 w-40 rounded-full bg-gold/20 blur-3xl"
       />
 
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-start gap-6 px-4 pt-20 pb-12">
+      <div className="relative z-10 flex min-h-0 flex-col items-center justify-start gap-3 px-4 pt-6 pb-4 sm:min-h-screen sm:gap-6 sm:pt-20 sm:pb-12">
         
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center font-anton text-5xl font-black uppercase leading-none tracking-wider text-neon-red sm:text-6xl md:text-7xl"
+          className="text-center font-anton text-5xl font-black uppercase leading-none tracking-wider text-neon-purple sm:text-6xl md:text-7xl"
           style={{
-            textShadow: '0 0 15px rgba(255, 0, 64, 0.4), 0 2px 10px rgba(0, 0, 0, 0.8)',
-            filter: 'drop-shadow(0 0 5px rgba(255, 0, 64, 0.3))'
+            textShadow: '0 0 15px rgba(188, 19, 254, 0.4), 0 2px 10px rgba(0, 0, 0, 0.8)',
+            filter: 'drop-shadow(0 0 5px rgba(188, 19, 254, 0.3))'
           }}
         >
-          SHIZÜ
+          ParáBrasil
           <br />
-          NO IFOOD
+          Açaí! no iFood
         </motion.h1>
 
         <motion.h2
@@ -106,17 +106,17 @@ function Ifood() {
             onClick={() => {
               if (window.fbq) {
                 window.fbq('track', 'Subscribe', {
-                  content_name: 'Shizü - Pedir no iFood',
+                  content_name: 'ParáBrasil - Pedir no iFood',
                   value: 0,
                   currency: 'BRL'
                 })
               }
             }}
-            className={`sheen-effect group relative flex w-full items-center justify-center gap-3 rounded-full bg-neon-red px-8 py-5 font-bebas text-2xl font-bold uppercase tracking-wide text-white shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-neon-red/50 sm:py-6 sm:text-3xl md:text-4xl ${
+            className={`sheen-effect group relative flex w-full items-center justify-center gap-3 rounded-full bg-gold px-8 py-5 font-bebas text-2xl font-bold uppercase tracking-wide text-brand-purple shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-gold/50 sm:py-6 sm:text-3xl md:text-4xl ${
               shake ? 'animate-shake' : ''
             }`}
             style={{
-              boxShadow: '0 8px 30px rgba(255, 0, 64, 0.25), 0 0 15px rgba(255, 0, 64, 0.2)'
+              boxShadow: '0 8px 30px rgba(255, 215, 0, 0.35), 0 0 15px rgba(188, 19, 254, 0.2)'
             }}
           >
             <ShoppingBag className="h-7 w-7 transition-transform group-hover:scale-110 sm:h-9 sm:w-9" />

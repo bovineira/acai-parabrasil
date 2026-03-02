@@ -18,7 +18,7 @@ function Reserva() {
   useEffect(() => {
     if (window.fbq) {
       window.fbq('track', 'ViewContent', {
-        content_name: 'Reserva - Shizü',
+        content_name: 'Reserva - ParáBrasil',
         content_category: 'Reserva',
         value: 0,
         currency: 'BRL'
@@ -31,7 +31,7 @@ function Reserva() {
       <div
         className="absolute inset-0 z-0 bg-mobile-cover"
         style={{
-          backgroundImage: `url('/images/background-sushi.webp')`,
+          backgroundImage: `url('/images/background-lp-cardapio.webp')`,
         }}
       >
         <div className="absolute inset-0 bg-black/20"></div>
@@ -47,7 +47,7 @@ function Reserva() {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute left-10 top-20 z-0 h-32 w-32 rounded-full bg-neon-red/20 blur-3xl"
+        className="absolute left-10 top-20 z-0 h-32 w-32 rounded-full bg-neon-purple/20 blur-3xl"
       />
       <motion.div
         animate={{
@@ -63,16 +63,16 @@ function Reserva() {
         className="absolute bottom-20 right-10 z-0 h-40 w-40 rounded-full bg-gold/20 blur-3xl"
       />
 
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-start gap-6 px-4 pt-20 pb-12">
+      <div className="relative z-10 flex min-h-0 flex-col items-center justify-start gap-3 px-4 pt-6 pb-4 sm:min-h-screen sm:gap-6 sm:pt-20 sm:pb-12">
         
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center font-anton text-5xl font-black uppercase leading-none tracking-wider text-neon-red sm:text-6xl md:text-7xl"
+          className="text-center font-anton text-5xl font-black uppercase leading-none tracking-wider text-neon-purple sm:text-6xl md:text-7xl"
           style={{
-            textShadow: '0 0 15px rgba(255, 0, 64, 0.4), 0 2px 10px rgba(0, 0, 0, 0.8)',
-            filter: 'drop-shadow(0 0 5px rgba(255, 0, 64, 0.3))'
+            textShadow: '0 0 15px rgba(188, 19, 254, 0.4), 0 2px 10px rgba(0, 0, 0, 0.8)',
+            filter: 'drop-shadow(0 0 5px rgba(188, 19, 254, 0.3))'
           }}
         >
           FAÇA SUA
@@ -105,7 +105,7 @@ function Reserva() {
             onClick={() => {
               if (window.fbq) {
                 window.fbq('track', 'InitiateCheckout', {
-                  content_name: 'Reserva Shizü - WhatsApp',
+                  content_name: 'Reserva ParáBrasil - WhatsApp',
                   value: 0,
                   currency: 'BRL'
                 })

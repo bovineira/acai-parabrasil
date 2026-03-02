@@ -32,7 +32,7 @@ function Home() {
       <div 
         className="absolute inset-0 z-0 bg-mobile-cover"
         style={{
-          backgroundImage: `url('/images/background-sushi.webp')`,
+          backgroundImage: `url('/images/background-lp-cardapio.webp')`,
         }}
       >
         {/* Overlay escuro leve (20%) para contraste */}
@@ -50,7 +50,7 @@ function Home() {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute left-10 top-20 z-0 h-32 w-32 rounded-full bg-neon-red/20 blur-3xl"
+        className="absolute left-10 top-20 z-0 h-32 w-32 rounded-full bg-neon-purple/20 blur-3xl"
       />
       <motion.div
         animate={{
@@ -66,23 +66,23 @@ function Home() {
         className="absolute bottom-20 right-10 z-0 h-40 w-40 rounded-full bg-gold/20 blur-3xl"
       />
 
-      {/* Content Container - FLEXBOX VERTICAL COM GAP */}
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-start gap-6 px-4 pt-20 pb-12">
+      {/* Content Container - no mobile compacto no topo; desktop como antes */}
+      <div className="relative z-10 flex min-h-0 flex-col items-center justify-start gap-3 px-4 pt-6 pb-4 sm:min-h-screen sm:gap-6 sm:pt-20 sm:pb-12">
         
-        {/* 1. HEADLINE - Comunidade Shizü */}
+        {/* 1. HEADLINE - ParáBrasil Açaí */}
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center font-anton text-5xl font-black uppercase leading-none tracking-wider text-neon-red sm:text-6xl md:text-7xl"
+          className="text-center font-anton text-5xl font-black uppercase leading-none tracking-wider text-neon-purple sm:text-6xl md:text-7xl"
           style={{
-            textShadow: '0 0 15px rgba(255, 0, 64, 0.4), 0 2px 10px rgba(0, 0, 0, 0.8)',
-            filter: 'drop-shadow(0 0 5px rgba(255, 0, 64, 0.3))'
+            textShadow: '0 0 15px rgba(188, 19, 254, 0.4), 0 2px 10px rgba(0, 0, 0, 0.8)',
+            filter: 'drop-shadow(0 0 5px rgba(188, 19, 254, 0.3))'
           }}
         >
-          COMUNIDADE
+          ParáBrasil
           <br />
-          SHIZÜ
+          Açaí!
         </motion.h1>
 
         {/* 2. SUB-HEADLINE */}
@@ -95,7 +95,7 @@ function Home() {
             textShadow: '0 2px 10px rgba(0, 0, 0, 0.8)'
           }}
         >
-          Clicando abaixo, você entrará para nossa comunidade de ofertas premium de inauguração
+          Clicando abaixo, você entra para nossa comunidade de ofertas premium de açaí
         </motion.h2>
 
         {/* 4. BOTÃO CTA */}
@@ -103,7 +103,7 @@ function Home() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-4 w-full max-w-md px-4"
+          className="mt-1 w-full max-w-md px-4 sm:mt-4"
         >
           <a
             href="https://chat.whatsapp.com/Efw5485JVn4KDR3ZLj1EkR"
@@ -112,17 +112,17 @@ function Home() {
             onClick={() => {
               if (window.fbq) {
                 window.fbq('track', 'InitiateCheckout', {
-                  content_name: 'Comunidade Shizü - WhatsApp',
+                  content_name: 'Comunidade ParáBrasil - WhatsApp',
                   value: 0,
                   currency: 'BRL'
                 });
               }
             }}
-            className={`sheen-effect group relative flex w-full items-center justify-center gap-3 rounded-full bg-neon-red px-8 py-5 font-bebas text-2xl font-bold uppercase tracking-wide text-white shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-neon-red/50 sm:py-6 sm:text-3xl md:text-4xl ${
+            className={`sheen-effect group relative flex w-full items-center justify-center gap-3 rounded-full bg-gold px-8 py-5 font-bebas text-2xl font-bold uppercase tracking-wide text-brand-purple shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-gold/50 sm:py-6 sm:text-3xl md:text-4xl ${
               shake ? 'animate-shake' : ''
             }`}
             style={{
-              boxShadow: '0 8px 30px rgba(255, 0, 64, 0.25), 0 0 15px rgba(255, 0, 64, 0.2)'
+              boxShadow: '0 8px 30px rgba(255, 215, 0, 0.35), 0 0 15px rgba(188, 19, 254, 0.2)'
             }}
           >
             <ShoppingBag className="h-7 w-7 transition-transform group-hover:scale-110 sm:h-9 sm:w-9" />

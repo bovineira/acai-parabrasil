@@ -19,7 +19,7 @@ function Cardapio() {
   useEffect(() => {
     if (window.fbq) {
       window.fbq('track', 'ViewContent', {
-        content_name: 'Cardápio - Burguersia',
+        content_name: 'Cardápio - ParáBrasil',
         content_category: 'Cardápio',
         currency: 'BRL'
       });
@@ -28,10 +28,10 @@ function Cardapio() {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-deep-black">
-      {/* Faixa Fixa no Topo - A PARTIR DAS 18:30 - Atualizado para aquisição normal */}
+      {/* Faixa Fixa no Topo - Horário de funcionamento */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-gold py-3 px-4">
-        <p className="text-center font-bebas text-xl font-bold uppercase tracking-wider text-black sm:text-2xl md:text-3xl">
-          A PARTIR DAS 18:30
+        <p className="text-center font-bebas text-base font-bold uppercase tracking-wider text-black sm:text-xl md:text-2xl">
+          🕚 Seg a sáb: 11h às 23h | Domingo 12h às 23h
         </p>
       </div>
 
@@ -39,7 +39,7 @@ function Cardapio() {
       <div 
         className="absolute inset-0 z-0 bg-mobile-cover"
         style={{
-          backgroundImage: `url('/images/background.webp')`,
+          backgroundImage: `url('/images/background-lp-cardapio.webp')`,
         }}
       >
         {/* Overlay escuro leve (20%) para contraste */}
@@ -57,7 +57,7 @@ function Cardapio() {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute left-10 top-20 z-0 h-32 w-32 rounded-full bg-neon-red/20 blur-3xl"
+        className="absolute left-10 top-20 z-0 h-32 w-32 rounded-full bg-neon-purple/20 blur-3xl"
       />
       <motion.div
         animate={{
@@ -73,18 +73,18 @@ function Cardapio() {
         className="absolute bottom-20 right-10 z-0 h-40 w-40 rounded-full bg-gold/20 blur-3xl"
       />
 
-      {/* Content Container - FLEXBOX VERTICAL COM GAP */}
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center gap-8 px-4 py-12" style={{ paddingTop: 'calc(6rem - 50px)' }}>
+      {/* Content Container - no mobile compacto no topo; desktop centralizado */}
+      <div className="relative z-10 flex min-h-0 flex-col items-center justify-start gap-3 px-4 pt-20 pb-4 sm:min-h-screen sm:justify-center sm:gap-8 sm:py-12 sm:pt-24">
         
         {/* 1. HEADLINE - A Melhor da Região */}
         <motion.h1
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center font-anton text-6xl font-black uppercase leading-none tracking-wider text-neon-red sm:text-7xl md:text-8xl"
+          className="text-center font-anton text-6xl font-black uppercase leading-none tracking-wider text-neon-purple sm:text-7xl md:text-8xl"
           style={{
-            textShadow: '0 0 15px rgba(255, 0, 64, 0.4), 0 2px 10px rgba(0, 0, 0, 0.8)',
-            filter: 'drop-shadow(0 0 5px rgba(255, 0, 64, 0.3))'
+            textShadow: '0 0 15px rgba(188, 19, 254, 0.4), 0 2px 10px rgba(0, 0, 0, 0.8)',
+            filter: 'drop-shadow(0 0 5px rgba(188, 19, 254, 0.3))'
           }}
         >
           A MELHOR
@@ -113,23 +113,23 @@ function Cardapio() {
           className="mt-4 w-full max-w-md px-4"
         >
           <a
-            href="https://app.cardapioweb.com/burguersia?cid=2rzn"
+            href="https://acaiparabrasil.saipos.com/home"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => {
               // Facebook Pixel - Rastreio de clique no botão
               if (window.fbq) {
                 window.fbq('track', 'InitiateCheckout', {
-                  content_name: 'Cardápio - Burguersia',
+                  content_name: 'Cardápio - ParáBrasil',
                   currency: 'BRL'
                 });
               }
             }}
-            className={`sheen-effect group relative flex w-full items-center justify-center gap-3 rounded-full bg-gold px-8 py-5 font-bebas text-2xl font-bold uppercase tracking-wide text-black shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-gold/50 sm:py-6 sm:text-3xl md:text-4xl ${
+            className={`sheen-effect group relative flex w-full items-center justify-center gap-3 rounded-full bg-gold px-8 py-5 font-bebas text-2xl font-bold uppercase tracking-wide text-brand-purple shadow-2xl transition-all duration-300 hover:scale-105 hover:shadow-gold/50 sm:py-6 sm:text-3xl md:text-4xl ${
               shake ? 'animate-shake' : ''
             }`}
             style={{
-              boxShadow: '0 8px 30px rgba(255, 215, 0, 0.25), 0 0 15px rgba(255, 215, 0, 0.2)'
+              boxShadow: '0 8px 30px rgba(255, 215, 0, 0.35), 0 0 15px rgba(188, 19, 254, 0.2)'
             }}
           >
             <Menu className="h-7 w-7 transition-transform group-hover:scale-110 sm:h-9 sm:w-9" />
