@@ -5,6 +5,7 @@ import Linktree from './pages/Linktree'
 import Qrcode from './pages/Qrcode'
 import Reserva from './pages/Reserva'
 import Ifood from './pages/Ifood'
+import IfoodSimoesfilho from './pages/IfoodSimoesfilho'
 import './index.css'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/qrcode" element={<Qrcode />} />
       <Route path="/reserva" element={<Reserva />} />
       <Route path="/ifood" element={<Ifood />} />
+      <Route path="/ifood-simoesfilho" element={<IfoodSimoesfilho />} />
     </Routes>
   )
 }
