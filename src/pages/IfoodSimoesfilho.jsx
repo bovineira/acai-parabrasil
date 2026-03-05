@@ -29,7 +29,7 @@ function IfoodSimoesfilho() {
   // No mobile: abre no mesmo contexto para o OS poder abrir o app iFood (Universal Links / App Links)
   const handleIfoodClick = (e) => {
     if (window.fbq) {
-      window.fbq('track', 'InitiateCheckout', {
+      window.fbq('track', 'Subscribe', {
         content_name: 'iFood Simões Filho - ParáBrasil',
         currency: 'BRL'
       })
