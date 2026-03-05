@@ -119,7 +119,7 @@ function Cardapio() {
             onClick={() => {
               // Facebook Pixel - Rastreio de clique no botão
               if (window.fbq) {
-                window.fbq('track', 'InitiateCheckout', {
+                window.fbq('track', 'Subscribe', {
                   content_name: 'Cardápio - ParáBrasil',
                   currency: 'BRL'
                 });
