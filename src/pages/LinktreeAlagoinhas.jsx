@@ -1,12 +1,13 @@
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Menu, ShoppingBag } from 'lucide-react'
+import { Menu, ShoppingBag, Cake } from 'lucide-react'
 
 const CARDAPIO_URL = 'https://acaiparabrasil.saipos.com/home'
 const IFOOD_ALAGOINHAS_URL =
   'https://www.ifood.com.br/delivery/alagoinhas-ba/acai-parabrasil---alagoinhas-centro/6ba9856b-48ad-4268-b905-7206ae812440?UTM_Medium=share&utm_source=ig&utm_medium=social&utm_content=link_in_bio'
 const WHATSAPP_URL =
   'https://api.whatsapp.com/send?phone=557598511923&text=Ol%25C3%25A1%252C%2520gostaria%2520de%2520realizar%2520um%2520pedido%2521&utm_source=ig&utm_medium=social&utm_content=link_in_bio'
+const WHATSAPP_ANIVERSARIO_URL = 'https://wa.me/5571991968763'
 
 const WhatsAppIcon = ({ className }) => (
   <svg
@@ -147,6 +148,31 @@ function LinktreeAlagoinhas() {
             </div>
             <span className="flex-1 text-left text-base font-medium tracking-wide text-white/95 sm:text-lg">
               Falar no WhatsApp
+            </span>
+          </motion.a>
+
+          <motion.a
+            href={WHATSAPP_ANIVERSARIO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.26 }}
+            className={linkCardClass}
+            onClick={() => {
+              if (window.fbq) {
+                window.fbq('track', 'Subscribe', {
+                  content_name: 'WhatsApp Aniversário ParáBrasil - Alagoinhas',
+                  currency: 'BRL'
+                })
+              }
+            }}
+          >
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gold/25 text-gold">
+              <Cake className="h-5 w-5" strokeWidth={2.25} />
+            </div>
+            <span className="flex-1 text-left text-base font-medium tracking-wide text-white/95 sm:text-lg">
+              ANIVERSÁRIO NO PARÁBRASIL
             </span>
           </motion.a>
         </div>
