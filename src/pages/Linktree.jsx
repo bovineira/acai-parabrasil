@@ -62,9 +62,9 @@ function Linktree() {
           className="mb-8"
         >
           <img 
-            src="/linktree/logo shizu.jpg" 
+            src="/linktree/logo-para-brasil.png" 
             alt="ParáBrasil Logo" 
-            className="h-32 w-32 rounded-full object-cover ring-2 ring-gold/30 sm:h-40 sm:w-40"
+            className="mx-auto h-24 w-auto max-w-[240px] object-contain sm:h-28 sm:max-w-[280px]"
           />
         </motion.div>
 

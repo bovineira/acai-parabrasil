@@ -72,9 +72,9 @@ function LinktreeAlagoinhas() {
           className="mb-10 flex flex-col items-center"
         >
           <img
-            src="/linktree/logo shizu.jpg"
+            src="/linktree/logo-para-brasil.png"
             alt="ParáBrasil"
-            className="h-14 w-14 rounded-full object-cover ring-1 ring-white/20 shadow-lg shadow-black/30 sm:h-16 sm:w-16"
+            className="mx-auto h-12 w-auto max-w-[200px] object-contain sm:h-14 sm:max-w-[220px]"
           />
           <p className="mt-3 text-center text-xs font-medium tracking-[0.2em] text-white/50">
             ParáBrasil · Alagoinhas
