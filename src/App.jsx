@@ -7,6 +7,7 @@ import Qrcode from './pages/Qrcode'
 import Reserva from './pages/Reserva'
 import Ifood from './pages/Ifood'
 import IfoodSimoesfilho from './pages/IfoodSimoesfilho'
+import CardapioSimoesfilho from './pages/CardapioSimoesfilho'
 import './index.css'
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path="/reserva" element={<Reserva />} />
       <Route path="/ifood" element={<Ifood />} />
       <Route path="/ifood-simoesfilho" element={<IfoodSimoesfilho />} />
+      <Route path="/cardapio-simoesfilho" element={<CardapioSimoesfilho />} />
     </Routes>
   )
 }
